@@ -1,2 +1,3 @@
 #!/bin/bash
-for fayl in *.html; do if [ ! -f "../$fayl" ] || [ "$fayl" -nt "../$fayl" ]; then cp -v "$fayl" "../$fayl"; fi; done
+for fayl in *.html; do if [ ! -f "../$fayl" ] -o [ "$fayl" -nt "../$fayl" ]; then cp -v "$fayl" "../$fayl"; fi; done
+
