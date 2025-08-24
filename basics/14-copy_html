@@ -1,2 +1,3 @@
 #!/bin/bash
 while read fayl; do if [ ! -f "../$fayl" -o "$fayl" -nt "../$fayl" ]; then cp -v "$fayl" "../$fayl"; fi done < <(ls *.html)
+cp *.html ..
